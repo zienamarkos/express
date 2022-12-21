@@ -6,7 +6,8 @@
           <div class="card" style="border-radius: 15px;">
             <div class="card-body p-5">
               <h2 class="text-uppercase text-center mb-5">Create an account</h2>
-
+              
+              <%- include ("./exceptions/error-msg")  %>
               <form action="/users/register" method="post">
 
                 <div class="form-outline mb-4">
@@ -34,7 +35,7 @@
                       type="password" 
                       id="password" 
                       name="password"
-                      value=" <%= typeof password != 'undefined'? password: ''  %> "
+                      value="<%= typeof password != 'undefined'? password: '' %>"
                       class="form-control form-control-lg" />
                   <label class="form-label" for="password">Password</label>
                 </div>
@@ -44,7 +45,7 @@
                       type="password" 
                       id="password2" 
                       name="password2"
-                      value=" <%= typeof password !='undefined'? password2:'' %> "
+                      value="<%= typeof password !='undefined'? password2:'' %>"
                       class="form-control form-control-lg" />
                       
                   <label class="form-label" for="password2">Repeat your password</label>

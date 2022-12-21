@@ -17,9 +17,10 @@
                   <div class="col-lg-6">
                     <div class="card-body p-md-5 mx-md-4">
       
-                     
+                      
                       </div>
-      
+                        
+                      <%- include ("./exceptions/error-msg")  %>
                       <form action="/users/login" method="post">
                         <p class=" text-uppercase text-center mb-5 fw-bold ">Please login to your account</p>
       
@@ -27,6 +28,7 @@
                           <input 
                               type="email" 
                               id="email"
+                              name="email"
                               class="form-control mx-3"
                               value="<%= typeof email != 'undefined'? email: '' %>"
                               placeholder="Phone number or email address" />
@@ -36,7 +38,8 @@
                         <div class="form-outline mb-4">
                           <input 
                               type="password" 
-                              id="password" 
+                              id="password"
+                              name="password" 
                               placeholder="enter your password"
                               value="<%= typeof password != 'undefined'? password: '' %>"
                               class="form-control mx-3" />
